@@ -1,6 +1,6 @@
-const { getAllGenerate } = require('../function/getAllGenerate');
+const { getPlanetWithCache } = require('../function/getPlanetWithCache');
 
 module.exports = async (req, res) => {
-  const value = await getAllGenerate();
-  res.status(200).send(value.data);
+  const value = getPlanetWithCache();
+  res.status(200).send(value);
 };

@@ -1,7 +1,7 @@
-const { getAllGenerate } = require('../src/controller/planet/function/getAllGenerate');
+const axios = require('axios');
 
 test('route test ', async () => {
-  const value = await getAllGenerate();
+  const value = await axios.get('http://127.0.0.1:4041/adapter/get');
   console.log(value);
-  expect(value.data.value.name).toBeTruthy();
+  expect(value.data.name).toBeTruthy();
 });
